@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FastAPI Student Management</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>🎓 Student Management System</h1>
+
+        <p class="welcome">
+            Welcome to FastAPI Project
+        </p>
+
+        <!-- Add Student -->
+        <div class="card">
+
+            <h2>Add Student</h2>
+
+            <form id="studentForm">
+
+                <input
+                    type="number"
+                    id="studentId"
+                    placeholder="Student ID"
+                    required
+                >
+
+                <input
+                    type="text"
+                    id="studentName"
+                    placeholder="Student Name"
+                    required
+                >
+
+                <input
+                    type="text"
+                    id="studentCourse"
+                    placeholder="Course"
+                    required
+                >
+
+                <button type="submit">
+                    Add Student
+                </button>
+
+            </form>
+
+            <p id="message"></p>
+
+        </div>
+
+
+        <!-- Search -->
+        <div class="card">
+
+            <h2>Search Students</h2>
+
+            <div class="search-box">
+
+                <input
+                    type="number"
+                    id="searchId"
+                    placeholder="Search by ID"
+                >
+
+                <button onclick="searchStudent()">
+                    Search
+                </button>
+
+                <button onclick="loadStudents()">
+                    Show All
+                </button>
+
+            </div>
+
+            <div class="course-search">
+
+                <input
+                    type="text"
+                    id="course"
+                    placeholder="Search by course"
+                >
+
+                <button onclick="searchCourse()">
+                    Search Course
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- Students -->
+        <div class="card">
+
+            <h2>Student List</h2>
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Course</th>
+                    </tr>
+                </thead>
+
+                <tbody id="studentTable">
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
